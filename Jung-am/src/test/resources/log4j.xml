@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.jungam.oneroom">
+	<logger name="com.jungam.manage">
 		<level value="info" />
 	</logger>
 	
