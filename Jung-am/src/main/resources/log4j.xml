@@ -12,7 +12,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.jungam.manage">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
