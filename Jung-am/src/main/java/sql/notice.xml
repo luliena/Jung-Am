@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="notice">
+	<!--<typeAlias alias="NoticeListVO" type="com.jungam.manage.vo.NoticeList"/> -->
+	<select id="list" resultClass="com.jungam.manage.vo.NoticeListVO">
+	  SELECT INDEX		AS index
+	  		,TITLE		AS title
+			,WRITER		AS writer
+			,CONTENT	AS content
+			,HITCOUNT	AS hitCount
+	  FROM NOTICES
+	</select>
+	
+</sqlMap>
