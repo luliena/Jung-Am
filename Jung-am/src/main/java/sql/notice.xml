@@ -4,8 +4,10 @@
 	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
 <sqlMap namespace="notice">
-	<!--<typeAlias alias="NoticeListVO" type="com.jungam.manage.vo.NoticeList"/> -->
-	<select id="list" resultClass="com.jungam.manage.vo.NoticeListVO">
+	<typeAlias alias="noticeListVO" type="com.jungam.manage.vo.NoticeListVO"/>
+	
+	
+	<select id="list" resultClass="noticeListVO">
 	  SELECT INDEX		AS index
 	  		,TITLE		AS title
 			,WRITER		AS writer
@@ -14,4 +16,19 @@
 	  FROM NOTICES
 	</select>
 	
+	<select id="getnotice" parameterClass="int" resultClass="noticeListVO">
+	  SELECT INDEX		AS index
+	  		,TITLE		AS title
+			,WRITER		AS writer
+			,CONTENT	AS content
+			,HITCOUNT	AS hitCount
+	  FROM NOTICES
+	  WHERE INDEX=#no#
+	</select>
+	
+	<select id="savenotice" parameterClass="noticeListVO">
+		INSERT INTO 
+		NOTICES(TITLE, WRITER, CONTENT)
+		VALUES(#title#, #writer#, #content#)
+	</select>
 </sqlMap>

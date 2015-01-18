@@ -22,10 +22,7 @@
 		<property name="configLocation" value="/WEB-INF/spring/SqlMapConfig.xml"></property>
 	</bean>
 	
-	<!-- 
-	<bean id="noticelist" class="com.jungam.manage.dao.NoticeListDaoImpl">
-	  <property name="sqlMapClient" ref="sqlMapClient"></property>
-	 </bean>
-	 -->
+	
+
 		
 </beans>

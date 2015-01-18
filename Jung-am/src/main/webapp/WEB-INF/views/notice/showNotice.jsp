@@ -6,29 +6,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>Show Notice</title>
 </head>
 <body>
 	<%
-	   int listCount;
-	
-		ArrayList<NoticeListVO> resultTableList = new ArrayList<NoticeListVO>();
-		resultTableList = (ArrayList<NoticeListVO>)request.getAttribute("list");
-		
-		if(resultTableList == null) {
-			listCount =0;
-		} else {
-			listCount = resultTableList.size();
-		}
+		NoticeListVO notice = (NoticeListVO)request.getAttribute("notice");
 	%>
 	
 	<table width="500" height="300" border="1">
-	  
-	    <%
-			if(listCount > 0){
-				for(int i=0; i<listCount; i++){
-					NoticeListVO notice = resultTableList.get(i);
-		%>
 		<tr>
 			<td width="33%" align="center">
 				<label><%= notice.getIndex() %></label>
@@ -46,12 +31,7 @@
 				<label><%= notice.getHitCount() %></label>
 			</td>			
 		</tr>
-		
 	</table>
-	<%
-			}
-		}
-	%>
 
 </body>
 </html>
