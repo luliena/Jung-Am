@@ -4,5 +4,28 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- PostgreSQL JDBC setting -->
+   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	    <property name="driverClassName" value="org.postgresql.Driver"></property>
+		<property name="url" value="jdbc:postgresql://127.0.0.1:5432/jungam"></property>
+		<property name="username" value="jungam"></property>
+		<property name="password" value="jungam0720"></property>
+	    <property name="removeAbandoned" value="true"/>
+	    <property name="initialSize" value="20" />
+	    <property name="maxActive" value="30" />
+	</bean>
+
+	<!-- 2. ibatis 코딩을 지원해주는 SqlMapClient 빈 생성 -->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="/WEB-INF/spring/SqlMapConfig.xml"></property>
+	</bean>
+	
+	<!-- 
+	<bean id="noticelist" class="com.jungam.manage.dao.NoticeListDaoImpl">
+	  <property name="sqlMapClient" ref="sqlMapClient"></property>
+	 </bean>
+	 -->
 		
 </beans>
