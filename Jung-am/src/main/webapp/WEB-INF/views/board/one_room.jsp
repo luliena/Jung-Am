@@ -12,6 +12,8 @@
 <div class="8room"><a href="#">8~10평(중문)</a></div>
 <div class="8room"><a href="#">5~7평</a></div>
 <div class="8room"><a href="#">3~4평</a></div>
+
+<div class="writing"><a href="oneroom_make.jsp">글쓰기</a></div>
 <%@ include file="footer.jsp" %>
 </body>
 </html>

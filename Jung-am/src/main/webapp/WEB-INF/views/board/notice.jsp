@@ -44,7 +44,7 @@
 <li><a href="#">4</a></li>
 <li><a href="#">5</a></li>
 </ul>
-<div class="writing"><a href="#">글쓰기</a></div>
+<div class="writing"><a href="notice_make.jsp">글쓰기</a></div>
 <div class="revise"><a href="#">수정</a></div>
 <div class="delete"><a href="#">삭제</a></div>
 
