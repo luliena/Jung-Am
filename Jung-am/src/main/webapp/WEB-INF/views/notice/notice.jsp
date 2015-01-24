@@ -1,3 +1,9 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="com.jungam.manage.vo.NoticeVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,20 +28,34 @@
     등록일
     </td>
 </tr>
-<tr>
-	<td>
-    1.1
-    </td>
-    <td>
-    2.1
-    </td>
-    <td>
-    3.1
-    </td>
-    <td>
-    4.1
-    </td>
-</tr>
+	<%
+		int listCount;
+		HashMap<Integer, NoticeVO> resultTableList = (HashMap<Integer, NoticeVO>) request.getAttribute("list");
+		
+		if(resultTableList.size() > 0){
+    		Iterator<Integer> key = resultTableList.keySet().iterator();
+    		while(key.hasNext()) {
+    			NoticeVO notice = resultTableList.get(key.next());
+	%>
+				<tr>
+					<td>
+				    <%=notice.getIndex() %>
+				    </td>
+				    <td>
+				    <a href="shownotice/<%=notice.getIndex()%>.do"><%= notice.getTitle().toString() %></a>
+				    </td>
+				    <td>
+				    <%= notice.getWriter().toString() %>
+				    </td>
+				    <td>
+				    <%= notice.getContent().toString() %>
+				    </td>
+				    <!-- not hit count -->
+				</tr>
+	<%
+			}
+		}
+	%>
 </table>
 <ul>
 <li><a href="#">1</a></li>
