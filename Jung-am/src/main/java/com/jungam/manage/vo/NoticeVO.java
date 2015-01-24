@@ -1,11 +1,15 @@
 package com.jungam.manage.vo;
 
-public class NoticeListVO {
+public class NoticeVO {
 	int index;
 	String title;
 	String writer;
 	String content;
 	int hitCount;
+	
+	// not table mumbers
+	int offset;
+	int limit;
 	
 	public int getIndex() {
 		return index;
@@ -37,5 +41,17 @@ public class NoticeListVO {
 	}
 	public void setHitCount(int hitCount) {
 		this.hitCount = hitCount;
+	}
+	public int getOffset() {
+		return offset;
+	}
+	public int getLimit() {
+		return limit;
+	}
+	public void setOffset(int offset) {
+		this.offset = offset;
+	}
+	public void setLimit(int limit) {
+		this.limit = limit;
 	}
 }

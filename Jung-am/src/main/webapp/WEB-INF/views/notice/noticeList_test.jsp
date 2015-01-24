@@ -1,4 +1,6 @@
-<%@page import="com.jungam.manage.vo.NoticeListVO"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="com.jungam.manage.vo.NoticeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -10,31 +12,25 @@
 </head>
 <body>
 	<%
-	   int listCount;
-	
-		ArrayList<NoticeListVO> resultTableList = new ArrayList<NoticeListVO>();
-		resultTableList = (ArrayList<NoticeListVO>)request.getAttribute("list");
+		int listCount;
 		
-		if(resultTableList == null) {
-			listCount =0;
-		} else {
-			listCount = resultTableList.size();
-		}
+		//HashMap<Integer, NoticeVO> resultTableList = new HashMap<Integer, NoticeVO>();
+		HashMap<Integer, NoticeVO> resultTableList = (HashMap<Integer, NoticeVO>) request.getAttribute("list");
 	%>
 	
 	<table width="500" height="300" border="1">
-	  
-	    <%
-			if(listCount > 0){
-				for(int i=0; i<listCount; i++){
-					NoticeListVO notice = resultTableList.get(i);
-		%>
+	  <%
+	    	if(resultTableList.size() > 0){
+	    		Iterator<Integer> key = resultTableList.keySet().iterator();
+	    		while(key.hasNext()) {
+	    			NoticeVO notice = resultTableList.get(key.next());
+	    %>
 		<tr>
 			<td width="33%" align="center">
 				<%= notice.getIndex() %>
 			</td>
 			<td width="33%" align="center">
-				<label><a href="shownotice.do?index=<%=notice.getIndex()%>"><%= notice.getTitle().toString() %></a></label>
+				<label><a href="shownotice/<%=notice.getIndex()%>.do"><%= notice.getTitle().toString() %></a></label>
 			</td>
 			<td width="33%" align="center">
 				<%= notice.getWriter().toString() %>

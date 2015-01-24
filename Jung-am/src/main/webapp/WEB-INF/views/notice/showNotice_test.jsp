@@ -1,4 +1,4 @@
-<%@page import="com.jungam.manage.vo.NoticeListVO"%>
+<%@page import="com.jungam.manage.vo.NoticeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%
-		NoticeListVO notice = (NoticeListVO)request.getAttribute("notice");
+		NoticeVO notice = (NoticeVO)request.getAttribute("noticeNode");
 	%>
 	
 	<table width="500" height="300" border="1">
