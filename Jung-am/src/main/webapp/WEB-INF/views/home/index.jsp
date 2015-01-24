@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<jsp:include page="header.jsp" flush="false" />
+<jsp:include page="../common/header.jsp" flush="false" />
 <div id="wrap">
 <div id="container">
 	<div id="spot">
@@ -24,6 +24,6 @@
 	</a></div>
 </div>
 </div>
-<%@ include file="footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

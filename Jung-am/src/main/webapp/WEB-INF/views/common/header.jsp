@@ -8,10 +8,10 @@
         logo
 	</a></div>
 	<div id="menu">
-		<div class="menu01"><a href="notice.php">공지사항</a></div>
-        <div class="menu02"><a href="one_room.php">원룸공실안내</a></div>
-        <div class="menu03"><a href="utility.php">공과금안내</a></div>
-        <div class="menu04"><a href="directions.php">찾아오는 길</a></div>
+		<div class="menu01"><a href="../notice/notice.jsp">공지사항</a></div>
+        <div class="menu02"><a href="../board/one_room.jsp">원룸공실안내</a></div>
+        <div class="menu03"><a href="../utility/utility.jsp">공과금안내</a></div>
+        <div class="menu04"><a href="/directions/directions.jsp">찾아오는 길</a></div>
 	</div>   
 </div>
  

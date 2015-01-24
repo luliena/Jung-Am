@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<jsp:include page="../common/header.jsp" flush="false" />
 <form name="utility_make" method="post" action="#">
  <fieldset>
  <legend>공과금안내</legend>
@@ -22,7 +23,6 @@
  <input type="reset" value="취소"/></p>  
  </fieldset>
 </form>
-
-
+<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

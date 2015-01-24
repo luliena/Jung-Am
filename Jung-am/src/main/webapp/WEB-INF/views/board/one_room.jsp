@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<jsp:include page="header.jsp" flush="false" />
+<jsp:include page="../common/header.jsp" flush="false" />
 <h1>원룸공실안내</h1>
 <div class="8room"><a href="#">8~10평</a></div>
 <div class="8room"><a href="#">8~10평(중문)</a></div>
@@ -14,6 +14,6 @@
 <div class="8room"><a href="#">3~4평</a></div>
 
 <div class="writing"><a href="oneroom_make.jsp">글쓰기</a></div>
-<%@ include file="footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

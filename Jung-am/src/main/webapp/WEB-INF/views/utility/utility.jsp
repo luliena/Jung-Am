@@ -6,7 +6,7 @@
 </head>
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
-<h1>공지사항</h1>
+<h1>공과금안내</h1>
 <table width="400" height="15" border="1">
 <tr>
 	<td>
@@ -44,10 +44,9 @@
 <li><a href="#">4</a></li>
 <li><a href="#">5</a></li>
 </ul>
-<div class="writing"><a href="notice_make.jsp">글쓰기</a></div>
+<div class="writing"><a href="utility_make.jsp">글쓰기</a></div>
 <div class="revise"><a href="#">수정</a></div>
 <div class="delete"><a href="#">삭제</a></div>
-
 <%@ include file="../common/footer.jsp" %>
 </body>
 </html>
