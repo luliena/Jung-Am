@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div id="header">
 	<div id="tnb">
         	<div class="tnb01"><a href="#">로그인</a></div>
