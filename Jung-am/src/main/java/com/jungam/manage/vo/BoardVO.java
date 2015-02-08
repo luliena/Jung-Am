@@ -23,6 +23,14 @@ public class BoardVO {
 	int offset;
 	int limit;
 	
+	public BoardVO(String title, String writer, String content) {
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+	}
+	public BoardVO(){
+		
+	}
 	public int getIndex() {
 		return index;
 	}

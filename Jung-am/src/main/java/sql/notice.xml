@@ -9,11 +9,11 @@
 	
 	<select id="list" parameterClass="boardVO" resultClass="boardVO">
 		SELECT INDEX		AS index
-				,TITLE		AS title
+			,TITLE		AS title
 			,WRITER		AS writer
 			,CONTENT	AS content
 			,HITCOUNT	AS hitCount
-			,REGIDATE   AS regiDate
+			,to_char(REGIDATE, 'YYYY/MM/DD')   AS regiDate
 		FROM NOTICES
 		ORDER BY INDEX DESC
 		OFFSET #offset# LIMIT #limit#
@@ -24,9 +24,10 @@
 			  ,FILENO AS fileNo
 			  ,PATH AS path
 			  ,FILENAME AS fileName
-		FROM NOTIE_FILES
+			  ,CONTENTTYPE AS contentType
+		FROM NOTICE_FILES
 		WHERE INDEX=#no#
-		ORDER BY FILENAME
+		ORDER BY fileNo
 	</select>
 	
 	<select id="getnotice" parameterClass="int" resultClass="boardVO">
@@ -40,15 +41,19 @@
 	  WHERE INDEX=#no#
 	</select>
 	
-	<select id="addnotice" parameterClass="boardVO">
+	<insert id="addnotice" parameterClass="boardVO">
 		INSERT INTO 
 		NOTICES(TITLE, WRITER, CONTENT)
 		VALUES(#title#, #writer#, #content#)
-	</select>
+		<selectKey resultClass="int" keyProperty="index">
+       		select currval('auto_notices_increment_seq')
+    	</selectKey>
+	</insert>
 	
-	<select id="addfiles" parameterClass="fileVO">
+	<insert id="addfile" parameterClass="fileVO">
 		INSERT INTO
-		NOTICE_FILES(INDEX, PATH, FILENAME)
-		VALUES(#index#, #path#, #fileName#)
-	</select>
+		NOTICE_FILES(INDEX, PATH, FILENAME, CONTENTTYPE)
+		VALUES(#index#, #path#, #fileName#, #contentType#)
+	</insert>
+	
 </sqlMap>

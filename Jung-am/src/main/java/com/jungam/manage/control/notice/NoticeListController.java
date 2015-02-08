@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,6 +26,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jungam.manage.dao.NoticeDao;
 import com.jungam.manage.vo.BoardVO;
+import com.jungam.manage.vo.FileVO;
 
 
 @Controller
@@ -33,6 +35,7 @@ public class NoticeListController {
 	private final static Logger logger = Logger.getLogger(NoticeListController.class);
 	private static String REQ_PAGE = "page";
 	private static int PAGING_MAX_NODE = 10;		// maxium node in each page 
+	private static String SAVE_FILE_PATH = "D:/workspace/Jung-am/Jung-am/upload_files";
 	
 	@Autowired
 	@Qualifier("noticeDao")		// define of noticeListDao
@@ -52,8 +55,6 @@ public class NoticeListController {
 		
 		mv.setViewName("notice/notice");		// set jsp view name
 		mv.addObject("list", noticeList);			// set paramater and send object to jsp view
-		
-//		showWriteNotice(req, res, mv);
 		
 		return mv;
 	}
@@ -78,13 +79,23 @@ public class NoticeListController {
 		logger.debug(title);
 		logger.debug(content);
 		
+		String writer = "temp"; 			// get id from session or cooki!!
+		BoardVO board = new BoardVO(title, writer, content);
 		
 		List<MultipartFile> files = request.getFiles("file");
 		
-		for(MultipartFile file : files) {
-			logger.debug("file name : " + file.getName() + " / " + file.getContentType()  + "/" + file.getSize());
-			fileUpload(file, "D:/workspace/Jung-am/Jung-am/upload_files");
+		ArrayList<FileVO> saveFiles = new ArrayList<FileVO>();
+		if(files.size() > 0) {
+			for(MultipartFile file : files) {
+				logger.debug("file name : " + file.getName() + " / " + file.getContentType()  + "/" + file.getSize());
+				
+				fileUpload(file, SAVE_FILE_PATH);
+				saveFiles.add(new FileVO(SAVE_FILE_PATH + file.getOriginalFilename(), file.getOriginalFilename(), file.getContentType()));
+			}
 		}
+		board.setFiles(saveFiles);
+		
+		noticeDao.addBoardNode(board);
 		
 		return notice((HttpServletRequest)request, response);
 	}

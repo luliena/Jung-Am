@@ -13,7 +13,8 @@ public class NoticeDao extends BoardDao {
 	private static final String GET_NOTICE_LIST = "notice.list";
 	private static final String GET_FILE_LIST = "notice.filelist";
 	private static final String GET_NOTCIE_NODE = "notice.getnotice";
-	private static final String ADD_NOTICE_NODE = "notcie.addnotice";
+	private static final String ADD_NOTICE_NODE = "notice.addnotice";
+	private static final String ADD_FILE_NODE = "notice.addfile";
 	
 	@Autowired
 	public NoticeDao(SqlMapClient sqlMapClient){
@@ -29,7 +30,7 @@ public class NoticeDao extends BoardDao {
 		return super.getBoardNode(GET_NOTCIE_NODE, index);
 	}
 	
-	public void addBoardNode(String sql, BoardVO board) {
-		super.addBoardNode(ADD_NOTICE_NODE, board);
+	public void addBoardNode(BoardVO board) {
+		super.addBoardNode(ADD_NOTICE_NODE, ADD_FILE_NODE, board);
 	}
 }

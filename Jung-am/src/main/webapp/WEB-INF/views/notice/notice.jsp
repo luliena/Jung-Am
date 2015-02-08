@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@page import="com.jungam.manage.vo.FileVO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="com.jungam.manage.vo.BoardVO"%>
+<%@page import="com.jungam.manage.vo.FileVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -58,12 +60,23 @@
 				    <%= notice.getWriter().toString() %>
 				    </td>
 				    <td>
-				    <%= String.valueOf(notice.getHitCount()) %>
+				    <%= notice.getRegiDate().toString() %>
 				    </td>
 				</tr>
 				<tr class="content">
 					<td colspan="4">
-				    <%= notice.getContent().toString() %> <!--  need to change notice.getRegiDate().toString() -->
+				    <%= notice.getContent().toString() %>
+				    <% ArrayList<FileVO> files;
+				    if((files = notice.getFiles()) != null) {
+				    		for(FileVO file : files) {
+				    			if(file.getContentType().equals("image/jpeg"))	{	%>
+				    				<img src=<%= file.getPath().toString() %> width=100  heigh=500 />
+				    				<%
+				    			}
+				    		}
+				    }
+				    %>
+				    	
 				    </td>
 			    </tr>
 	<%

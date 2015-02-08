@@ -20,7 +20,7 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		setSqlMapClient(sqlMapClient);
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "rawtypes" })
 	protected HashMap getBoardList(String sql, String fileSql, int offset, int limit)
 			throws Exception {
 		HashMap<Integer, BoardVO> map = new HashMap<Integer, BoardVO>();
@@ -32,14 +32,16 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		ArrayList<BoardVO> list = (ArrayList<BoardVO>) getSqlMapClientTemplate().queryForList(sql, board);
 		
 		for(BoardVO n : list) {
-			n.setFiles((ArrayList<FileVO>) getSqlMapClientTemplate().queryForList(fileSql, n.getIndex()));
-			
-			map.put(n.getIndex(), n);
 			logger.debug("List Index : " + n.getIndex());
 			logger.debug("List Title : " + n.getTitle());
 			logger.debug("List Writer : " + n.getWriter());
 			logger.debug("List Context : " + n.getContent());
 			logger.debug("List HitCount : " + n.getHitCount());
+			
+			ArrayList<FileVO> file = (ArrayList<FileVO>) getSqlMapClientTemplate().queryForList(fileSql, n.getIndex());
+			n.setFiles(file == null ? null : file);
+			if(file != null) logger.debug("List file : " + file.size());
+			map.put(n.getIndex(), n);
 		}
 		
 		return map;
@@ -49,16 +51,23 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		return  (BoardVO) getSqlMapClientTemplate().queryForObject(sql, index);
 	}
 	
-	protected void addBoardNode(String boardSql, String indexSql, String fileSql, BoardVO board) {
+	protected void addBoardNode(String boardSql, String fileSql, BoardVO board) {
 		logger.debug("Add Title : " + board.getTitle());
 		logger.debug("Add Writer : " + board.getWriter());
 		logger.debug("Add Context : " + board.getContent());
 		
-		getSqlMapClientTemplate().insert(boardSql, board);
+		int index = (Integer) getSqlMapClientTemplate().insert(boardSql, board);
 		
-		BoardVO index = (BoardVO) getSqlMapClientTemplate().queryForObject(indexSql, board);
+//		BoardVO index = (BoardVO) getSqlMapClientTemplate().queryForObject(indexSql, board);
+				
+		ArrayList<FileVO> files = board.getFiles();
+		if(files == null) return;
 		
-		
+		for(FileVO file : files) {
+			file.setIndex(index);
+			logger.debug("Add file : " +  file.getPath());
+			getSqlMapClientTemplate().insert(fileSql, file);
+		}
 	}
 	
 	
