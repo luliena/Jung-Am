@@ -12,7 +12,7 @@ import com.jungam.manage.vo.BoardVO;
 public class NoticeDao extends BoardDao {
 	private static final String GET_NOTICE_LIST = "notice.list";
 	private static final String GET_NOTCIE_NODE = "notice.getnotice";
-	
+	private static final String ADD_NOTICE_NODE = "notcie.addnotice";
 	
 	@Autowired
 	public NoticeDao(SqlMapClient sqlMapClient){
@@ -26,5 +26,9 @@ public class NoticeDao extends BoardDao {
 
 	public BoardVO getNoticeNode(int index) throws Exception {
 		return super.getBoardNode(GET_NOTCIE_NODE, index);
+	}
+	
+	public void addBoardNode(String sql, BoardVO board) {
+		super.addBoardNode(ADD_NOTICE_NODE, board);
 	}
 }

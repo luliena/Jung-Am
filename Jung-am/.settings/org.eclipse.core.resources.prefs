@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views=UTF-8
+encoding//src/main/webapp/WEB-INF/views/board=UTF-8
+encoding//src/main/webapp/WEB-INF/views/common/footer.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/common/header.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/notice/AddNotice.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/notice/notice_back.jsp=UTF-8

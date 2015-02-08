@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
-import com.jungam.manage.control.notice.NoticeListController;
 import com.jungam.manage.vo.BoardVO;
 
 public class BoardDao extends SqlMapClientDaoSupport{
@@ -34,18 +33,26 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		
 		for(BoardVO n : list) {
 			map.put(n.getIndex(), n);
-			logger.debug("Index : " + n.getIndex());
-			logger.debug("Title : " + n.getTitle());
-			logger.debug("Writer : " + n.getWriter());
-			logger.debug("Context : " + n.getContent());
-			logger.debug("HitCount : " + n.getHitCount());
+			logger.debug("List Index : " + n.getIndex());
+			logger.debug("List Title : " + n.getTitle());
+			logger.debug("List Writer : " + n.getWriter());
+			logger.debug("List Context : " + n.getContent());
+			logger.debug("List HitCount : " + n.getHitCount());
 		}
 		
 		return map;
 	}
 
 	protected BoardVO getBoardNode(String sql, int index) throws Exception {
-		return  (BoardVO) getSqlMapClientTemplate().queryForObject("notice.getnotice", index);
+		return  (BoardVO) getSqlMapClientTemplate().queryForObject(sql, index);
+	}
+	
+	protected void addBoardNode(String sql, BoardVO board) {
+		logger.debug("Add Title : " + board.getTitle());
+		logger.debug("Add Writer : " + board.getWriter());
+		logger.debug("Add Context : " + board.getContent());
+		
+		getSqlMapClientTemplate().delete(sql, board);
 	}
 	
 	/*

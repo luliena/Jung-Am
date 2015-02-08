@@ -4,29 +4,33 @@
 	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
 <sqlMap namespace="notice">
-	<typeAlias alias="noticeListVO" type="com.jungam.manage.vo.NoticeListVO"/>
+	<typeAlias alias="boardVO" type="com.jungam.manage.vo.BoardVO"/>
 	
-	
-	<select id="list" resultClass="noticeListVO">
+	<select id="list" parameterClass="boardVO" resultClass="boardVO">
 	  SELECT INDEX		AS index
 	  		,TITLE		AS title
 			,WRITER		AS writer
 			,CONTENT	AS content
 			,HITCOUNT	AS hitCount
+			,REGIDATE   AS REGIDATE
 	  FROM NOTICES
+	  ORDER BY INDEX
+	  OFFSET #offset# LIMIT #limit#
+	  
 	</select>
 	
-	<select id="getnotice" parameterClass="int" resultClass="noticeListVO">
+	<select id="getnotice" parameterClass="int" resultClass="boardVO">
 	  SELECT INDEX		AS index
 	  		,TITLE		AS title
 			,WRITER		AS writer
 			,CONTENT	AS content
 			,HITCOUNT	AS hitCount
+			,REGIDATE   AS REGIDATE
 	  FROM NOTICES
 	  WHERE INDEX=#no#
 	</select>
 	
-	<select id="savenotice" parameterClass="noticeListVO">
+	<select id="addnotice" parameterClass="boardVO">
 		INSERT INTO 
 		NOTICES(TITLE, WRITER, CONTENT)
 		VALUES(#title#, #writer#, #content#)
