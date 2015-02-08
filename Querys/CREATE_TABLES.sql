@@ -5,10 +5,18 @@ INDEX INT NOT NULL DEFAULT nextval('auto_notices_increment_seq'::regclass) prima
 TITLE VARCHAR(80) NOT NULL,
 WRITER VARCHAR(50) NOT NULL,
 CONTENT TEXT,
-HITCOUNT INT DEFAULT 0 );
+HITCOUNT INT DEFAULT 0,
+REGIDATE DATE NEW()
+);
 
-insert into notices(title, writer, content, hitcount) values('aaa', 'bbb', 'akjdfkjakdf', 0);
-commit;
+-- NOTICE_FILES TABLE
+CREATE SEQUENCE auto_notice_files_increment_seq;
+CREATE TABLE 
 
-drop table notices;
--- USERS TABLE
+CREATE SEQUENCE auto_notice_files_increment_seq;
+CREATE TABLE NOTICE_FILES (
+FILENO INT NOT NULL DEFAULT nextval('auto_notices_increment_seq'::regclass) primary key,
+INDEX INT NOT NULL,
+PATH VARCHAR(250) NOT NULL,
+FILENAME VARCHAR(200) NOT NULL
+);

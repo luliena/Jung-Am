@@ -9,6 +9,7 @@ import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.jungam.manage.vo.BoardVO;
+import com.jungam.manage.vo.FileVO;
 
 public class BoardDao extends SqlMapClientDaoSupport{
 	private final static Logger logger = Logger.getLogger(BoardDao.class);
@@ -19,8 +20,8 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		setSqlMapClient(sqlMapClient);
 	}
 
-	@SuppressWarnings("rawtypes")
-	protected HashMap getBoardList(String sql, int offset, int limit)
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	protected HashMap getBoardList(String sql, String fileSql, int offset, int limit)
 			throws Exception {
 		HashMap<Integer, BoardVO> map = new HashMap<Integer, BoardVO>();
 		
@@ -28,10 +29,11 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		board.setOffset(offset);
 		board.setLimit(limit);
 		
-		@SuppressWarnings("unchecked")
-		ArrayList<BoardVO> list = (ArrayList<BoardVO>) getSqlMapClientTemplate().queryForList("notice.list", board);
+		ArrayList<BoardVO> list = (ArrayList<BoardVO>) getSqlMapClientTemplate().queryForList(sql, board);
 		
 		for(BoardVO n : list) {
+			n.setFiles((ArrayList<FileVO>) getSqlMapClientTemplate().queryForList(fileSql, n.getIndex()));
+			
 			map.put(n.getIndex(), n);
 			logger.debug("List Index : " + n.getIndex());
 			logger.debug("List Title : " + n.getTitle());
@@ -47,19 +49,17 @@ public class BoardDao extends SqlMapClientDaoSupport{
 		return  (BoardVO) getSqlMapClientTemplate().queryForObject(sql, index);
 	}
 	
-	protected void addBoardNode(String sql, BoardVO board) {
+	protected void addBoardNode(String boardSql, String indexSql, String fileSql, BoardVO board) {
 		logger.debug("Add Title : " + board.getTitle());
 		logger.debug("Add Writer : " + board.getWriter());
 		logger.debug("Add Context : " + board.getContent());
 		
-		getSqlMapClientTemplate().delete(sql, board);
+		getSqlMapClientTemplate().insert(boardSql, board);
+		
+		BoardVO index = (BoardVO) getSqlMapClientTemplate().queryForObject(indexSql, board);
+		
+		
 	}
 	
-	/*
-	@SuppressWarnings("unchecked")
-	@Override
-	public ArrayList<NoticeListVO> getNoticeList() throws Exception {
-		// TODO Auto-generated method stub
-		return (ArrayList<NoticeListVO>) getSqlMapClientTemplate().queryForList("notice.list");
-	}*/
+	
 }

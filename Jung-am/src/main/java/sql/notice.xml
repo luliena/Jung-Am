@@ -5,18 +5,28 @@
 
 <sqlMap namespace="notice">
 	<typeAlias alias="boardVO" type="com.jungam.manage.vo.BoardVO"/>
+	<typeAlias alias="fileVO" type="com.jungam.manage.vo.FileVO"/>
 	
 	<select id="list" parameterClass="boardVO" resultClass="boardVO">
-	  SELECT INDEX		AS index
-	  		,TITLE		AS title
+		SELECT INDEX		AS index
+				,TITLE		AS title
 			,WRITER		AS writer
 			,CONTENT	AS content
 			,HITCOUNT	AS hitCount
-			,REGIDATE   AS REGIDATE
-	  FROM NOTICES
-	  ORDER BY INDEX
-	  OFFSET #offset# LIMIT #limit#
-	  
+			,REGIDATE   AS regiDate
+		FROM NOTICES
+		ORDER BY INDEX DESC
+		OFFSET #offset# LIMIT #limit#
+	</select>
+	
+	<select id="filelist" parameterClass="int" resultClass="fileVO">
+		SELECT INDEX AS index
+			  ,FILENO AS fileNo
+			  ,PATH AS path
+			  ,FILENAME AS fileName
+		FROM NOTIE_FILES
+		WHERE INDEX=#no#
+		ORDER BY FILENAME
 	</select>
 	
 	<select id="getnotice" parameterClass="int" resultClass="boardVO">
@@ -34,5 +44,11 @@
 		INSERT INTO 
 		NOTICES(TITLE, WRITER, CONTENT)
 		VALUES(#title#, #writer#, #content#)
+	</select>
+	
+	<select id="addfiles" parameterClass="fileVO">
+		INSERT INTO
+		NOTICE_FILES(INDEX, PATH, FILENAME)
+		VALUES(#index#, #path#, #fileName#)
 	</select>
 </sqlMap>

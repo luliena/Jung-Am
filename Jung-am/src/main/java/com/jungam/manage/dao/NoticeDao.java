@@ -11,6 +11,7 @@ import com.jungam.manage.vo.BoardVO;
 @Repository("noticeDao")		//define noticelist as NoticeListDaoImple
 public class NoticeDao extends BoardDao {
 	private static final String GET_NOTICE_LIST = "notice.list";
+	private static final String GET_FILE_LIST = "notice.filelist";
 	private static final String GET_NOTCIE_NODE = "notice.getnotice";
 	private static final String ADD_NOTICE_NODE = "notcie.addnotice";
 	
@@ -21,7 +22,7 @@ public class NoticeDao extends BoardDao {
 
 	@SuppressWarnings("rawtypes")
 	public HashMap getNoticeList(int offset, int limit) throws Exception {
-		return super.getBoardList(GET_NOTICE_LIST, offset, limit);
+		return super.getBoardList(GET_NOTICE_LIST, GET_FILE_LIST, offset, limit);
 	}
 
 	public BoardVO getNoticeNode(int index) throws Exception {
