@@ -90,7 +90,7 @@ public class NoticeListController {
 				logger.debug("file name : " + file.getName() + " / " + file.getContentType()  + "/" + file.getSize());
 				
 				fileUpload(file, SAVE_FILE_PATH);
-				saveFiles.add(new FileVO(SAVE_FILE_PATH + file.getOriginalFilename(), file.getOriginalFilename(), file.getContentType()));
+				saveFiles.add(new FileVO(SAVE_FILE_PATH  + "/" + file.getOriginalFilename(), file.getOriginalFilename(), file.getContentType()));
 			}
 		}
 		board.setFiles(saveFiles);

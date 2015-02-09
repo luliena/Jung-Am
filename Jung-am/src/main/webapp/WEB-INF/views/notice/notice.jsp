@@ -69,10 +69,12 @@
 				    <% ArrayList<FileVO> files;
 				    if((files = notice.getFiles()) != null) {
 				    		for(FileVO file : files) {
-				    			if(file.getContentType().equals("image/jpeg"))	{	%>
-				    				<img src=<%= file.getPath().toString() %> width=100  heigh=500 />
+				    			%> <h3> <%=file.getPath().toString()%></h3> <%
+				    			//if(file.getContentType().equals("image/jpeg"))	{	%>
+				    				<img src=<%= file.getPath().toString() %> width=100  heigh=500 >
+				    				<img src="D:/workspace/Jung-am/Jung-am/upload_files/P20141028_181212000_E2444061-0834-4611-AC00-C3CD3EC13BFD.JPG"/>
 				    				<%
-				    			}
+				    			//}
 				    		}
 				    }
 				    %>

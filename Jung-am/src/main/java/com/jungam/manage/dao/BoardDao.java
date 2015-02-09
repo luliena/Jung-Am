@@ -39,7 +39,7 @@ public class BoardDao extends SqlMapClientDaoSupport{
 			logger.debug("List HitCount : " + n.getHitCount());
 			
 			ArrayList<FileVO> file = (ArrayList<FileVO>) getSqlMapClientTemplate().queryForList(fileSql, n.getIndex());
-			n.setFiles(file == null ? null : file);
+			n.setFiles(file);
 			if(file != null) logger.debug("List file : " + file.size());
 			map.put(n.getIndex(), n);
 		}
