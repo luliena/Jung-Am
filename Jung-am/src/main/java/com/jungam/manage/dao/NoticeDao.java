@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.jungam.manage.vo.BoardVO;
 
-@Repository("noticeDao")		//define noticelist as NoticeListDaoImple
+@Repository("noticeDao")
 public class NoticeDao extends BoardDao {
 	private static final String GET_NOTICE_LIST = "notice.list";
 	private static final String GET_FILE_LIST = "notice.filelist";

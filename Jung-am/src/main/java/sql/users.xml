@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="users">
+	<typeAlias alias="userVO" type="com.jungam.manage.vo.UserVO"/>
+	
+	<select id="list" resultClass="userVO">
+		SELECT ID		AS id
+			,PASSWORD	AS password
+			,USER_NAME	AS name
+			,EMAIL		AS email
+			,LEVELS		AS level
+			,to_char(LAST_DATE, 'YYYY/MM/DD')   AS lastDate
+		FROM USERS
+		ORDER BY ID
+	</select>
+	
+	<select id="gerUser" parameterClass="java.lang.String" resultClass="userVO">
+		SELECT ID		AS id
+			,PASSWORD	AS password
+			,USER_NAME	AS name
+			,EMAIL		AS email
+			,LEVELS		AS level
+			,to_char(LAST_DATE, 'YYYY/MM/DD')   AS lastDate
+		FROM USERS
+		WHERE ID=#id#
+	</select>
+	
+	<insert id="addUser" parameterClass="userVO">
+		INSERT INTO
+		USERS(ID, PASSWORD, USER_NAME, EMAIL, LEVELS, LAST_DATE)
+		VALUES(#id#, #password#, #name#, #email#, #phone#, #level#, now())
+	</insert>
+	
+	<delete id="deleteUser" parameterClass="java.lang.String">
+		DELETE
+		FROM USERS
+		WHERE ID=#id# 
+	</delete>
+	
+	<update id="updateUser" parameterClass="userVO">
+		UPDATE USERS
+		SET PASSWORD=#password#, EMAIL=#email#, PHONE=#phone#, LEVELS=#level#
+		WHERE ID=#id#
+	</update>
+</sqlMap>

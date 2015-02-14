@@ -33,6 +33,8 @@ import com.jungam.manage.vo.FileVO;
 public class NoticeListController {
 
 	private final static Logger logger = Logger.getLogger(NoticeListController.class);
+	private static NoticeListController noticeListContoroller = null;
+	
 	private static String REQ_PAGE = "page";
 	private static int PAGING_MAX_NODE = 10;		// maxium node in each page 
 	private static String SAVE_FILE_PATH = "D:/workspace/Jung-am/Jung-am/upload_files";
@@ -42,16 +44,28 @@ public class NoticeListController {
 	private NoticeDao noticeDao;
 	private HashMap<Integer, BoardVO> noticeList = new HashMap<Integer, BoardVO>();
 	
+//	private NoticeListController() {
+//	}
+	
+	public static NoticeListController getInstance() {
+		if(noticeListContoroller != null) return noticeListContoroller;
+		else return (noticeListContoroller = new NoticeListController());
+	}
+	
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/noticeList", method = RequestMethod.GET)	// get request from '/notice' page
-	protected ModelAndView notice(HttpServletRequest req, HttpServletResponse res)	throws Exception {
+	public ModelAndView notice(HttpServletRequest req, HttpServletResponse res) {
 		int page = 0;
 		ModelAndView mv = new ModelAndView();
 
 		// get page number default 0
 		page = (req.getParameter(REQ_PAGE) == null ? 0 : Integer.parseInt(req.getParameter(REQ_PAGE)) -1 );
 		
-		noticeList.putAll(noticeDao.getNoticeList(page*PAGING_MAX_NODE, PAGING_MAX_NODE));
+		try {
+			noticeList.putAll(noticeDao.getNoticeList(page*PAGING_MAX_NODE, PAGING_MAX_NODE));
+		} catch (Exception e) {
+			logger.equals(e);
+		}
 		
 		mv.setViewName("notice/notice");		// set jsp view name
 		mv.addObject("list", noticeList);			// set paramater and send object to jsp view

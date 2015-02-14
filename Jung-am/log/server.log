@@ -1,546 +1,149 @@
-21:11:03.853 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
-21:11:05.391 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Mon Feb 09 21:11:05 KST 2015]; root of context hierarchy
-21:11:05.530 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-21:11:09.390 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1955970: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
-21:11:09.868 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 5080 ms
-21:11:10.488 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
-21:11:10.492 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Feb 09 21:11:10 KST 2015]; parent: Root WebApplicationContext
-21:11:10.494 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-21:11:10.827 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-21:11:10.829 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-21:11:11.050 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:11:11.055 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@12dd76: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,noticeDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1955970
-21:11:11.239 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-21:11:11.243 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:11:11.250 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:11:11.250 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:11:11.254 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
-21:11:27.039 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
-21:11:27.153 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Mon Feb 09 21:11:27 KST 2015]; root of context hierarchy
-21:11:27.232 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-21:11:27.388 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9ac0f5: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
-21:11:27.664 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 622 ms
-21:11:27.759 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
-21:11:27.763 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Feb 09 21:11:27 KST 2015]; parent: Root WebApplicationContext
-21:11:27.765 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-21:11:27.869 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-21:11:27.871 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-21:11:28.046 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:11:28.055 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c10de0: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,noticeDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@9ac0f5
-21:11:28.140 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-21:11:28.143 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:11:28.144 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:11:28.144 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:11:28.145 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
-21:11:30.358 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-21:11:30.455 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 2696 ms
-21:11:57.083 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:11:57.083 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:11:57.083 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:11:57.084 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:11:57.084 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.245 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:11:57.245 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:11:57.246 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:11:57.246 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:11:57.246 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:11:57.246 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.250 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:11:57.252 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:11:57.252 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:11:57.252 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:11:57.252 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:11:57.253 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.254 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:11:57.254 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:11:57.254 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:11:57.255 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:11:57.255 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:11:57.255 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.256 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:11:57.257 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:11:57.257 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:11:57.257 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:11:57.263 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:11:57.264 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.266 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:11:57.267 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:11:57.267 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:11:57.267 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:11:57.267 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:11:57.267 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:11:57.269 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:13:13.808 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:13:13.808 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:13:13.809 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:13:13.809 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:13:13.809 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.816 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:13:13.816 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:13:13.816 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:13:13.817 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:13:13.817 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:13:13.817 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.818 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:13:13.820 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:13:13.820 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:13:13.821 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:13:13.821 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:13:13.821 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.827 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:13:13.827 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:13:13.828 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:13:13.828 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:13:13.828 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:13:13.828 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.830 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:13:13.831 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:13:13.831 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:13:13.831 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:13:13.831 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:13:13.831 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.833 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:13:13.836 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:13:13.836 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:13:13.837 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:13:13.837 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:13:13.837 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:13:13.838 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:08.487 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:16:08.488 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:08.488 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:08.488 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:16:08.488 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.490 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:16:08.490 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:16:08.491 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:08.491 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:08.491 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:16:08.491 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.492 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:16:08.493 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:16:08.493 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:08.493 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:08.493 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:16:08.493 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.494 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:08.495 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:16:08.495 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:16:08.495 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:16:08.495 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:16:08.495 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.496 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:08.497 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:16:08.497 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:16:08.497 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:16:08.497 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:16:08.497 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.499 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:08.499 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:16:08.499 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:16:08.499 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:16:08.499 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:16:08.500 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:08.501 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:41.246 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:16:41.246 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:41.246 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:41.247 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:16:41.247 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.249 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:16:41.249 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:16:41.249 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:41.250 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:41.250 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:16:41.250 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.251 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:16:41.252 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:16:41.252 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:16:41.252 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:16:41.252 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:16:41.252 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.253 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:41.253 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:16:41.254 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:16:41.254 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:16:41.254 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:16:41.254 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.255 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:41.255 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:16:41.255 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:16:41.255 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:16:41.256 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:16:41.256 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.257 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:16:41.257 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:16:41.257 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:16:41.257 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:16:41.257 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:16:41.258 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:16:41.258 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:18:03.128 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:18:03.129 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:18:03.129 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:18:03.129 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:18:03.129 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.130 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:18:03.131 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:18:03.131 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:18:03.131 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:18:03.131 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:18:03.131 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.132 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:18:03.133 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:18:03.133 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:18:03.133 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:18:03.133 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:18:03.133 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:18:03.135 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.136 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:18:03.137 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:18:03.137 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:18:03.137 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:18:03.137 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:18:03.137 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.138 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:18:03.139 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:18:03.139 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:18:03.139 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:18:03.139 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:18:03.139 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:18:03.140 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:19:53.632 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:19:53.633 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:19:53.633 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:19:53.634 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:19:53.635 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:19:53.637 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.639 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:19:53.639 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:19:53.640 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:19:53.640 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:19:53.640 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:19:53.640 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.641 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:19:53.642 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:19:53.642 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:19:53.642 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:19:53.642 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:19:53.642 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:19:53.645 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.647 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:19:53.648 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:19:53.648 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:19:53.648 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:19:53.648 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:19:53.648 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:19:53.649 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:23:10.137 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:23:10.138 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:23:10.138 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:23:10.138 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:23:10.138 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.140 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:23:10.141 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:23:10.141 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:23:10.141 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:23:10.141 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:23:10.142 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.143 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:23:10.143 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:23:10.144 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:23:10.144 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:23:10.144 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:23:10.144 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.146 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:23:10.146 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:23:10.147 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:23:10.147 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:23:10.147 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:23:10.147 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.149 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:23:10.149 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:23:10.149 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:23:10.150 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:23:10.150 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:23:10.150 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.151 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:23:10.152 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:23:10.152 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:23:10.152 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:23:10.152 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:23:10.153 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:23:10.154 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:24:03.356 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Feb 09 21:11:27 KST 2015]; parent: Root WebApplicationContext
-21:24:03.357 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c10de0: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,noticeDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@9ac0f5
-21:24:03.437 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing Root WebApplicationContext: startup date [Mon Feb 09 21:11:27 KST 2015]; root of context hierarchy
-21:24:03.438 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9ac0f5: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
-21:24:07.555 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
-21:24:07.678 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Mon Feb 09 21:24:07 KST 2015]; root of context hierarchy
-21:24:07.763 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-21:24:07.885 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@161100c: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
-21:24:08.202 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 644 ms
-21:24:08.222 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
-21:24:08.226 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Feb 09 21:24:08 KST 2015]; parent: Root WebApplicationContext
-21:24:08.227 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-21:24:08.346 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-21:24:08.348 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-21:24:08.647 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:24:08.652 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c83354: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,noticeDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@161100c
-21:24:08.730 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-21:24:08.734 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:24:08.734 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:24:08.734 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:24:08.736 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
-21:24:08.953 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-21:24:09.086 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 864 ms
-21:26:29.701 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
-21:26:29.891 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Mon Feb 09 21:26:29 KST 2015]; root of context hierarchy
-21:26:30.000 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-21:26:30.252 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14d921a: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
-21:26:30.719 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 988 ms
-21:26:30.825 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
-21:26:30.829 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Mon Feb 09 21:26:30 KST 2015]; parent: Root WebApplicationContext
-21:26:30.831 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-21:26:30.943 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-21:26:30.950 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-21:26:31.172 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:26:31.176 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@33c658: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,noticeDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@14d921a
-21:26:31.284 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-21:26:31.288 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:26:31.288 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:26:31.289 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-21:26:31.290 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
-21:26:31.831 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-21:26:31.941 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 1116 ms
-21:26:42.419 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:26:42.420 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:26:42.420 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:26:42.420 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:26:42.420 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.423 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:26:42.424 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:26:42.424 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:26:42.424 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:26:42.424 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:26:42.425 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.426 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:26:42.429 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:26:42.429 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:26:42.429 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:26:42.429 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:26:42.430 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.431 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:26:42.431 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:26:42.432 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:26:42.432 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:26:42.432 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:26:42.432 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.433 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:26:42.434 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:26:42.434 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:26:42.434 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:26:42.434 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:26:42.434 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.436 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:26:42.436 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:26:42.436 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:26:42.436 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:26:42.436 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:26:42.437 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:26:42.438 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:27:39.323 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:27:39.324 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:27:39.325 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:27:39.325 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:27:39.325 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.328 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:27:39.328 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:27:39.328 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:27:39.328 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:27:39.328 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:27:39.329 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.330 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:27:39.330 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:27:39.331 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:27:39.331 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:27:39.331 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:27:39.331 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.332 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:27:39.333 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:27:39.333 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:27:39.333 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:27:39.333 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:27:39.333 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:27:39.335 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.337 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:27:39.337 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:27:39.338 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:27:39.338 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:27:39.338 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:27:39.338 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:27:39.339 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:28:23.996 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:28:23.997 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:28:23.997 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:28:23.997 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:28:23.997 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:23.999 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:28:23.999 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:28:23.999 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:28:24.000 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:28:24.000 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:28:24.000 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:24.001 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:28:24.001 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:28:24.001 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:28:24.002 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:28:24.002 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:28:24.002 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:24.003 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:28:24.003 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:28:24.003 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:28:24.003 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:28:24.004 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:28:24.004 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:24.005 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:28:24.005 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:28:24.005 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:28:24.005 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:28:24.005 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:28:24.006 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:24.007 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:28:24.007 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:28:24.007 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:28:24.007 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:28:24.008 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:28:24.008 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:28:24.009 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:04.678 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:29:04.679 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:04.679 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:04.679 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:29:04.680 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.682 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:29:04.682 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:29:04.682 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:04.682 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:04.683 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:29:04.683 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.685 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:29:04.685 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:29:04.685 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:04.685 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:04.686 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:29:04.686 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.687 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:04.687 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:29:04.687 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:29:04.688 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:29:04.688 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:29:04.688 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.689 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:04.689 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:29:04.690 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:29:04.690 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:29:04.690 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:29:04.691 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.692 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:04.692 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:29:04.692 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:29:04.693 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:29:04.693 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:29:04.693 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:04.694 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:25.950 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:29:25.950 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:25.950 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:25.951 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:29:25.951 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.953 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:29:25.953 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:29:25.953 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:25.954 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:25.955 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:29:25.955 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.956 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:29:25.957 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:29:25.957 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:29:25.957 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:29:25.957 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:29:25.957 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.958 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:25.959 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:29:25.959 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:29:25.959 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:29:25.959 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:29:25.959 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.962 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:25.962 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:29:25.962 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:29:25.963 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:29:25.963 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:29:25.963 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.964 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:29:25.964 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:29:25.965 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:29:25.965 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:29:25.965 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:29:25.965 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:29:25.966 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:31:45.854 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
-21:31:45.855 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:31:45.855 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:31:45.856 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:31:45.856 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.859 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:31:45.860 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
-21:31:45.861 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:31:45.861 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:31:45.862 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
-21:31:45.862 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.865 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
-21:31:45.865 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
-21:31:45.866 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
-21:31:45.866 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
-21:31:45.866 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
-21:31:45.866 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.868 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:31:45.868 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
-21:31:45.868 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
-21:31:45.869 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
-21:31:45.869 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
-21:31:45.869 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.870 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:31:45.871 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
-21:31:45.871 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
-21:31:45.872 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
-21:31:45.872 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
-21:31:45.872 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.874 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
-21:31:45.874 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
-21:31:45.874 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
-21:31:45.875 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
-21:31:45.875 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
-21:31:45.875 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
-21:31:45.876 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
+00:09:45.438 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
+00:09:45.762 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Sun Feb 15 00:09:45 KST 2015]; root of context hierarchy
+00:09:45.867 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+00:09:46.268 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@cb42cf: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:09:46.615 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 1024 ms
+00:09:46.911 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
+00:09:46.916 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:09:46 KST 2015]; parent: Root WebApplicationContext
+00:09:46.918 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+00:09:47.048 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+00:09:47.050 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+00:09:47.277 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+00:09:47.282 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8990e4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@cb42cf
+00:09:47.412 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+00:09:47.415 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.415 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.416 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+00:09:47.417 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
+00:09:47.419 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.419 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkLogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.checkLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.420 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/registerUser],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.registerUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.420 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/addUser],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.addUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.420 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkDuplId],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected void com.jungam.manage.control.users.UsersController.checkDuplicateId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:47.421 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/userList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.userList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:09:48.071 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+00:09:48.175 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 1263 ms
+00:10:04.564 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 9
+00:10:04.565 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
+00:10:04.565 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
+00:10:04.565 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
+00:10:04.565 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.700 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
+00:10:04.700 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 7
+00:10:04.700 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
+00:10:04.700 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
+00:10:04.701 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : INSERT FILE
+00:10:04.701 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.702 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 1
+00:10:04.702 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 6
+00:10:04.702 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : insert test
+00:10:04.703 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : temp
+00:10:04.703 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : insert well?
+00:10:04.703 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.704 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
+00:10:04.704 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 5
+00:10:04.705 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttt
+00:10:04.705 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : xxx
+00:10:04.705 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : sss
+00:10:04.705 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.706 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
+00:10:04.707 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 4
+00:10:04.707 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : ttestttt
+00:10:04.707 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : who?
+00:10:04.707 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : dkslkdjfalskjdf;alkdjf;kja;slkdjf
+00:10:04.707 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.709 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
+00:10:04.710 DEBUG: com.jungam.manage.dao.BoardDao: 35 - List Index : 3
+00:10:04.710 DEBUG: com.jungam.manage.dao.BoardDao: 36 - List Title : titlelelel
+00:10:04.710 DEBUG: com.jungam.manage.dao.BoardDao: 37 - List Writer : writerrrr
+00:10:04.710 DEBUG: com.jungam.manage.dao.BoardDao: 38 - List Context : aaaabbccccc
+00:10:04.711 DEBUG: com.jungam.manage.dao.BoardDao: 39 - List HitCount : 0
+00:10:04.712 DEBUG: com.jungam.manage.dao.BoardDao: 43 - List file : 0
+00:19:30.764 DEBUG: com.jungam.manage.control.users.UsersController: 92 - duplicate Id : false
+00:29:33.036 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:09:46 KST 2015]; parent: Root WebApplicationContext
+00:29:33.039 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8990e4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@cb42cf
+00:29:33.098 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing Root WebApplicationContext: startup date [Sun Feb 15 00:09:45 KST 2015]; root of context hierarchy
+00:29:33.098 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@cb42cf: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:29:37.047 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
+00:29:37.147 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Sun Feb 15 00:29:37 KST 2015]; root of context hierarchy
+00:29:37.220 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+00:29:37.483 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5902ca: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:29:37.847 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 797 ms
+00:29:37.867 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
+00:29:37.871 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:29:37 KST 2015]; parent: Root WebApplicationContext
+00:29:37.872 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+00:29:37.993 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+00:29:37.996 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+00:29:38.329 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+00:29:38.336 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b2db5b: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5902ca
+00:29:38.423 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+00:29:38.426 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.427 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.427 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+00:29:38.429 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
+00:29:38.430 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.431 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkLogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.checkLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.431 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/registerUser],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.registerUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.432 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/addUser],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.addUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.432 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkDuplId],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected void com.jungam.manage.control.users.UsersController.checkDuplicateId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.433 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/userList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.userList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:29:38.688 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+00:29:38.775 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 908 ms
+00:29:58.847 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:29:37 KST 2015]; parent: Root WebApplicationContext
+00:29:58.849 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@b2db5b: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@5902ca
+00:29:58.867 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing Root WebApplicationContext: startup date [Sun Feb 15 00:29:37 KST 2015]; root of context hierarchy
+00:29:58.867 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5902ca: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:30:00.074 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
+00:30:00.204 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Sun Feb 15 00:30:00 KST 2015]; root of context hierarchy
+00:30:00.295 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+00:30:00.412 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f34a08: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:30:00.686 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 608 ms
+00:30:00.702 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
+00:30:00.706 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:30:00 KST 2015]; parent: Root WebApplicationContext
+00:30:00.708 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+00:30:00.805 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+00:30:00.808 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+00:30:00.985 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+00:30:00.989 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e48f2: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@f34a08
+00:30:01.225 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+00:30:01.228 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.228 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.229 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+00:30:01.229 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
+00:30:01.230 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.230 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkLogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.checkLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.231 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/registerUser],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.registerUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.231 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/addUser],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.addUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.231 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkDuplId],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected void com.jungam.manage.control.users.UsersController.checkDuplicateId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.232 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/userList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.userList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:01.417 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+00:30:01.527 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 824 ms
+00:30:11.562 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:30:00 KST 2015]; parent: Root WebApplicationContext
+00:30:11.563 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e48f2: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@f34a08
+00:30:11.569 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 1020 - Closing Root WebApplicationContext: startup date [Sun Feb 15 00:30:00 KST 2015]; root of context hierarchy
+00:30:11.569 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 433 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f34a08: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:30:12.804 INFO : org.springframework.web.context.ContextLoader: 273 - Root WebApplicationContext: initialization started
+00:30:12.927 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing Root WebApplicationContext: startup date [Sun Feb 15 00:30:12 KST 2015]; root of context hierarchy
+00:30:13.003 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+00:30:13.091 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e51960: defining beans [dataSource,sqlMapClient]; root of factory hierarchy
+00:30:13.349 INFO : org.springframework.web.context.ContextLoader: 302 - Root WebApplicationContext: initialization completed in 529 ms
+00:30:13.365 INFO : org.springframework.web.servlet.DispatcherServlet: 444 - FrameworkServlet 'appServlet': initialization started
+00:30:13.369 INFO : org.springframework.web.context.support.XmlWebApplicationContext: 495 - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Sun Feb 15 00:30:13 KST 2015]; parent: Root WebApplicationContext
+00:30:13.370 INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader: 315 - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+00:30:13.463 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 202 - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+00:30:13.465 INFO : org.springframework.context.annotation.ClassPathBeanDefinitionScanner: 210 - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+00:30:13.641 INFO : org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor: 139 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+00:30:13.645 INFO : org.springframework.beans.factory.support.DefaultListableBeanFactory: 557 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1f9c5c8: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,noticeListController,usersController,noticeDao,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,multipartResolver,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@e51960
+00:30:13.720 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/home],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.jungam.manage.control.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+00:30:13.723 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.notice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.723 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeWrite],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showWriteNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.724 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/noticeAdd],methods=[GET || POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.AddNotice(org.springframework.web.multipart.MultipartHttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+00:30:13.724 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/notice/{index}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.notice.NoticeListController.showNotice(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,int) throws java.lang.Exception
+00:30:13.725 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.726 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkLogin],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.checkLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.726 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/registerUser],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.registerUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.726 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/addUser],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.addUser(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.727 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/checkDuplId],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected void com.jungam.manage.control.users.UsersController.checkDuplicateId(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.727 INFO : org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: 190 - Mapped "{[/userList],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected org.springframework.web.servlet.ModelAndView com.jungam.manage.control.users.UsersController.userList(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+00:30:13.923 INFO : org.springframework.web.servlet.handler.SimpleUrlHandlerMapping: 314 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+00:30:14.025 INFO : org.springframework.web.servlet.DispatcherServlet: 463 - FrameworkServlet 'appServlet': initialization completed in 660 ms

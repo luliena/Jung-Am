@@ -4,18 +4,42 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <title>Untitled Document</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> 
+<!--  <script type="text/javascript" src="/WEB-INF/js/jquery-2.1.3.js"></script> -->
+<script>
+	$(document).ready(function () {
+		$('#register').click(function() {alert($('#id').val())});
+		
+		$('#checkdupl').click(function() {
+			$.ajax({
+				url: 'checkDuplId.do',
+				type: 'post',
+				data:{
+					id: $('#id').val()
+				},
+			success: function(data) {
+				alert("can use your id");
+			}
+		});
+	 });
+	 })
+</script>
+	
 </head>
 
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
+
+<form name="register" action="addUser.do" onsubmit="#" method="post">
 <table width="600" height="600" border="1">
 	<tr>
     	<td colspan="2" align="center">회원가입</td>
     </tr>
     <tr>
     	<th>아이디</th>
-        <td><input type="text" name="id">
-        <input type="button" name="idbutton" value="중복확인">
+        <td><input type="text" id="id" name="id">
+        <input type="button" id="checkdupl" name="idbutton" value="중복확인">
         </td>
     </tr>
     <tr>
@@ -60,6 +84,8 @@
               </td>
           </tr>
  </table>
+ <input type="button" id="register" value="회원가입">
+ </form>
 <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

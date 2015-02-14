@@ -2,8 +2,8 @@
     pageEncoding="utf-8"%>
 <div id="header">
 	<div id="tnb">
-        	<div class="tnb01"><a href="#">로그인</a></div>
-            <div class="tnb02"><a href="#">회원가입</a></div>
+        	<div class="tnb01"><a href="login.do">로그인</a></div>
+            <div class="tnb02"><a href="registerUser.do">회원가입</a></div>
             <div class="tnb03"><a href="#">아이디 &middot; 패스워드 찾기 </a></div>
 	</div>
 	<div id="logo"><a href="#">
