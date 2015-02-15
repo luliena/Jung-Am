@@ -11,8 +11,9 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> 
-<!--  <script type="text/javascript" src="/WEB-INF/js/jquery-2.1.3.js"></script> -->
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+<script type="text/javascript" src="/resources/js/jquery-2.1.3.js"></script>
+
 <script>
 	  $(document).ready(function () {
 		  //alert('start!!');
@@ -31,7 +32,7 @@
 	 });
 </script>
 	<title>Untitled Document</title>
-	<link href="D:/jung-am/Jung-am/src/main/webapp/WEB-INF/css/notice.css" rel="stylesheet" type="text/css"/>
+	<link href="/resources/css/notice.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
