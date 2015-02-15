@@ -5,14 +5,10 @@
     pageEncoding="utf-8"%>
 <title>Untitled Document</title>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> 
-<!--  <script type="text/javascript" src="/WEB-INF/js/jquery-2.1.3.js"></script> -->
+<!--  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script> --> 
+<script type="text/javascript" src="/resources/js/jquery-2.1.3.js"></script>
 <script>
 	$(document).ready(function () {
-		$('#register').click(
-			checkDuplicateID($('#id'))
-		);
-		
 		$('#checkdupl').click(
 			checkDuplicateID($('#id'))
 		);
@@ -37,28 +33,6 @@
 			}
 		});
 	}
-	function register() {
-		$.ajax({
-			url: 'addUser.do',
-			type: 'post',
-			datatype: 'json',
-			data:{
-				id: checkId.val()
-			},
-			success: function(response) {
-				if(response == 'false') {
-						alert("can use your id");
-				} else {
-					alert("Duplicat ID");
-					//$('#id').reset();
-					checkId.val().reset();
-				}
-			},
-			error: function(e) {
-				alert("error");
-			}
-		});
-	}
 </script>
 	
 </head>
@@ -66,7 +40,7 @@
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
 
-<form name="register" action="addUser.do" onsubmit="#" method="post">
+<form name="register" action="addUser.do" onsubmit="checkDuplicateID($('#id'))" method="post">
 <table width="600" height="600" border="1">
 	<tr>
     	<td colspan="2" align="center">회원가입</td>

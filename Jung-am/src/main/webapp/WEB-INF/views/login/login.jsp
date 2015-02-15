@@ -8,9 +8,10 @@
 
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
-<form>
+
+<form action="addUser.do" onsubmit="checkDuplicateID($('#id'))" method="post">
 	아이디<input type="text" name="id" value="" style="height:30px; width:150px;"/><br/>
-    비밀번호<input type="password" name="pw" value="" style="height:30px; width:150px;"/><br/>
+    비밀번호<input type="password" name="password" value="" style="height:30px; width:150px;"/><br/>
   <input type="submit" name="" value="로그인" style="height:30px; width:100px;"/>
 </form>
 <a style="text-decoration:none;" href="주소">회원가입 |</a>
