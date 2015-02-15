@@ -13,6 +13,7 @@
     <input type="button" value="ID중복검사"><br/>
     <div>비밀번호</div><input type="password" name="pw"><br/>
     <div>비밀번호 확인</div><input type="password" name="repw"><br/>
+    <div>이름</div><input type="text" name="name">
     <div>이메일</div><input type="text" name="email"><br/>
     <div>핸드폰</div>
     <select name="phone01">
