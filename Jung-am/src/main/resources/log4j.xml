@@ -24,7 +24,7 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.jungam.manage">
-		<level value="debug" />
+		<level value="trace" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

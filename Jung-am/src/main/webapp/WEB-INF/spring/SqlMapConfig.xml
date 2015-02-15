@@ -8,7 +8,7 @@
 	<settings useStatementNamespaces="true"/>
 	 
   	<sqlMap resource="sql/notice.xml"/>
-  	
+  	<sqlMap resource="sql/users.xml"/>
   	  
 </sqlMapConfig>
   	
