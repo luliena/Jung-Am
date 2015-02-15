@@ -30,7 +30,7 @@
 		<input type="text" name="title" placeholder=''/></br></br>
 		
 		파일첨부 : 
-		<input type="file" name="file"/></br></br>
+		<input type="file" name="file" multiple/></br></br>
 		
 		<TEXTAREA name="content" rows="10" cols="70"placeholder=''></TEXTAREA></br></br>
 		

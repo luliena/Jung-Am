@@ -31,13 +31,14 @@
 	 });
 </script>
 	<title>Untitled Document</title>
+	<link href="D:/jung-am/Jung-am/src/main/webapp/WEB-INF/css/notice.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
 <h1>공지사항</h1>
-<table width="400" height="15" border="1">
+<table width="400" height="15" border="1" cellspacing="0" cellpadding="3" bordercolor="#333333" align="center">
 <tr>
-	<td>    번호    </td><td>    제목    </td><td>    작성자    </td><td>    등록일    </td>
+	<td width="30" align="center">    번호    </td><td width="500" align="center">    제목    </td><td width="100" align="center">    작성자    </td><td width="100" align="center">    등록일    </td>
 </tr>
 	<%
 		int listCount;
@@ -80,7 +81,7 @@
 				    %>
 				    	
 				    </td>
-			    </tr>
+			    </tr> 
 	<%
 			}
 		}
