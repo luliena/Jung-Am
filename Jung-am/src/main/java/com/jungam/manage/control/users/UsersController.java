@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.jungam.manage.dao.UserDao;
+import com.jungam.manage.util.CryptoUtils;
 import com.jungam.manage.vo.UserVO;
 
 @Controller
@@ -52,7 +53,7 @@ public class UsersController {
 		logger.debug("check login");
 		
 		String id = request.getParameter("id");
-		String password = request.getParameter("password");
+		String password = CryptoUtils.encodeBase64(CryptoUtils.getSHA256(request.getParameter("password")));
 		logger.trace(id + " - " + password);
 		
 		UserVO checkUser = userDao.getUser(id);
@@ -83,12 +84,20 @@ public class UsersController {
 	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
 	protected ModelAndView addUser(HttpServletRequest request, HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView();
+		UserVO user = new UserVO();
 		
 		logger.debug("called addUser");
 		
-		String id = request.getParameter("id");
-		UserVO checkId = userDao.getUser(id);
-
+		user.setId(request.getParameter("id"));
+		user.setPassword(CryptoUtils.encodeBase64(CryptoUtils.getSHA256(request.getParameter("password"))));
+		user.setName(request.getParameter("name"));
+		user.setEmail(request.getParameter("phone1") + request.getParameter("phone2")+ request.getParameter("phone3"));
+		user.setEmail(request.getParameter("email") + request.getParameter("e_domain"));
+		
+		logger.trace(user.toString());
+		
+		userDao.addUser(user);
+		
 		mv.setViewName("login/list");
 		
 //		if(checkId == null)	mv.addObject("list", noticeList);

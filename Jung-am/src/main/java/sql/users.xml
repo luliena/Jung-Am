@@ -30,7 +30,7 @@
 	
 	<insert id="addUser" parameterClass="userVO">
 		INSERT INTO
-		USERS(ID, PASSWORD, USER_NAME, EMAIL, LEVELS, LAST_DATE)
+		USERS(ID, PASSWORD, USER_NAME, EMAIL, PHONE, LEVELS, LAST_DATE)
 		VALUES(#id#, #password#, #name#, #email#, #phone#, #level#, now())
 	</insert>
 	

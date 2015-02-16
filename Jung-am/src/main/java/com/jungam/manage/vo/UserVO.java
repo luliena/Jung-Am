@@ -52,4 +52,10 @@ public class UserVO {
 	public void setLastDate(String lastDate) {
 		this.lastDate = lastDate;
 	}
+	@Override
+	public String toString() {
+		return "UserVO [id=" + id + ", password=" + password + ", name=" + name
+				+ ", email=" + email + ", phone=" + phone + ", level=" + level
+				+ ", lastDate=" + lastDate + "]";
+	}
 }

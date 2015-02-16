@@ -40,7 +40,7 @@
 <body>
 <jsp:include page="../common/header.jsp" flush="false" />
 
-<form name="register" action="addUser.do" onsubmit="checkDuplicateID($('#id'))" method="post">
+<form name="registerForm" action="addUser.do" onsubmit="checkDuplicateID($('#id'))" method="post">
 <table width="600" height="600" border="1">
 	<tr>
     	<td colspan="2" align="center">회원가입</td>
@@ -62,8 +62,12 @@
     </tr>
      <tr>
     	<th>이름</th>
-        <td>
-        	<form>
+        <td><input type="text" id="name" name="name"></td>
+     </tr>
+     <tr>
+     	<th>핸드폰 번호</th>
+     	<td>
+        	<!--  <form> -->
             	<select size="1" name="phone1">
                 <option selected value="010">010</option>
                 <option value="011">011</option>
@@ -75,7 +79,7 @@
                 <input type="text" name="phone2" size="10" maxlength="20">
                 -
                 <input type="text" name="phone3" size="10" maxlength="20">
-            </form>
+            <!-- </form> -->
         </td>
     </tr>
     <tr>
@@ -93,7 +97,8 @@
               </td>
           </tr>
  </table>
- <input type="button" id="register" value="회원가입">
+ <input type="submit" id="register" value="회원가입">
+ 
  </form>
 <%@ include file="../common/footer.jsp" %>
 </body>
