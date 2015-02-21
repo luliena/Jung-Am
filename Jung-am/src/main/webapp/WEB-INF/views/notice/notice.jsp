@@ -35,11 +35,11 @@
 	<link href="/resources/css/notice.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<jsp:include page="../common/header.jsp" flush="false" />
+<jsp:include page="../ common/header.jsp" flush="false" />
 <h1>공지사항</h1>
-<table width="400" height="15" border="1" cellspacing="0" cellpadding="3" bordercolor="#333333" align="center">
+<table width="400" height="15" border="1" cellspacing="0" cellpadding="3" bordercolor="#ffffff" align="center">
 <tr>
-	<td width="30" align="center">    번호    </td><td width="500" align="center">    제목    </td><td width="100" align="center">    작성자    </td><td width="100" align="center">    등록일    </td>
+	<th  class="th" width="30" align="center">    번호    </th><th  class="th" width="500" align="center">    제목    </th><th  class="th" width="100" align="center">    작성자    </th><th  class="th" width="100" align="center">    등록일    </th>
 </tr>
 	<%
 		int listCount;
@@ -50,7 +50,7 @@
 			    		while(key.hasNext()) {
 			    			BoardVO notice = resultTableList.get(key.next());
 	%>
-				<tr class="title">
+				<tr class="title" align="center">
 					<td>
 				    <%=notice.getIndex() %>
 				    </td>
@@ -89,17 +89,18 @@
 	%>
 </table>
 
-<ul>
+<ul class="number">
 <li><a href="#">1</a></li>
 <li><a href="#">2</a></li>
 <li><a href="#">3</a></li>
 <li><a href="#">4</a></li>
-<li><a href="#">5</a></li>
+<li class="last"><a href="#">5</a></li>
 </ul>
+<div class="modify">
 <div class="writing"><a href="noticeWrite.do">글쓰기</a></div>
 <div class="revise"><a href="#">수정</a></div>
 <div class="delete"><a href="#">삭제</a></div>
-
+</div>
 <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

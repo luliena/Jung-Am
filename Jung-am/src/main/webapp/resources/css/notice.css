@@ -1,12 +1,42 @@
 @charset "utf-8";
 /* CSS Document */
-
+body{
+	font-family:'Helvetica Neue', Verdana, Arial, sans-serif;
+	font-size:12pt;
+}
 table{
 	width:80%;
 	margin:0 auto;
-	background:#06C;
 }
-tr{
+h1{
+	margin:15px 15px;
 }
-td{
+.th{
+	background:#19BDC4;
 }
+.title{
+	background:#DDE3E7;
+}
+.number{
+	margin:0 40%;
+	margin-top:15px;
+	font-size:12pt;
+	list-style:none;
+}
+.number li{
+	list-style:none;
+	float:left;
+	margin-right:6px;
+}
+.number li a{
+	text-decoration:none;
+}
+.modify{
+	clear:left;
+}
+.writing, .revise{
+	float:left;
+	margin-right:10px;
+}
+
+
